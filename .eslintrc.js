@@ -15,18 +15,10 @@ export default {
       "sourceType": "module",
       "project": "./tsconfig.json"
     },
-    settings: {
-      "react": {
-        "version": "detect"
-      }
-    },
     rules: {
-      "react/react-in-jsx-scope": "off",
-      "react/prop-types": "off",
       "no-var": "error",
       "prefer-const": "warn",
       "no-console": "off",
-      "react/no-unescaped-entities": "off",
       "no-unused-vars": [
         "warn",
         { "argsIgnorePattern": "^_", "destructuredArrayIgnorePattern": "^_" }
