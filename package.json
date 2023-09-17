@@ -18,7 +18,6 @@
     "build": "tsc && bun build",
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
-
     "discord-start": "bun run discord-register && bun run ./server/discord/commands/interaction_commands.ts",
     "discord-register": "bun run ./server/discord/commands/register_commands.ts"
   },
