@@ -24,6 +24,13 @@ const envSvhema = z.object({
     .nonempty({
       message: "ENV server DISCORD ID is empty",
     }),
+    DISCORD_CHANNEL_ID: z
+    .string({
+      required_error: "ENV channel DISCORD ID is required",
+    })
+    .nonempty({
+      message: "ENV channel DISCORD ID is empty",
+    }),
 });
 
 export const ENV = envSvhema.parse(process.env);

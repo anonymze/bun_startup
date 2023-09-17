@@ -17,8 +17,12 @@ instanceClientDiscord.on(Events.InteractionCreate, async interaction => {
 });
 
 // interac with actions
-instanceClientDiscord.on(Events.UserUpdate, (oldUser, newUser) => {
+instanceClientDiscord.on(Events.UserUpdate, async (oldUser, newUser) => {
   if (oldUser.avatarURL === newUser.avatarURL) return;
 
+  const channel = await instanceClientDiscord.channels.fetch('channel_id');
   
+  if (!channel || !channel.isTextBased()) return;
+
+  await channel.send('User updated avatar!');  
 });
