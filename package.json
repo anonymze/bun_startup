@@ -14,8 +14,8 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "start": "bun run echo 'Hello world!'",
-    "build": "bun build",
+    "start": "bun run ./server/index.ts",
+    "build": "tsc && bun build",
     "format": "prettier --write ./src",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx ."
   }
