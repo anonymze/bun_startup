@@ -1,8 +1,8 @@
 {
   "compilerOptions": {
     // where the compiler will output the files after outdir name
-    // "rootDir": ".",
-    // "outDir": "./dist",
+    "rootDir": ".",
+    "outDir": "./dist",
     // "baseUrl": "./server",
     // "paths": {
     // },
