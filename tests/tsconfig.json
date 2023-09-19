@@ -1,0 +1,8 @@
+{
+    "extends": "../tsconfig.json",
+    "compilerOptions": {
+    },
+    // where all files ts to check are located
+    "include": ["./**/*.test.ts"]
+  }
+  

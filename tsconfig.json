@@ -1,6 +1,11 @@
 {
   "compilerOptions": {
+    // where the compiler will output the files after outdir name
     "rootDir": ".",
+    // "outDir": "./dist",
+    "baseUrl": "./server",
+    // "paths": {
+    // },
     "lib": ["ESNext"],
     "module": "esnext",
     "target": "esnext",
@@ -13,12 +18,17 @@
     "downlevelIteration": true,
     "skipLibCheck": true,
     "jsx": "preserve",
+    // "jsx": "react",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
+    "sourceMap": true,
     "types": [
       "bun-types" // add Bun global
-    ]
-  }
+    ],    
+  },
+  // where all files ts to check are located
+  "include": ["./*.ts", "./server"],
+  "exclude": ["node_modules"]
 }

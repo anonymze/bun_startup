@@ -1,14 +1,12 @@
 import z from "zod";
 
 const envSvhema = z.object({
-  NODE_ENV: z.string().default("production"),
-  PORT: z.string().default("3000"),
-  DISCORD_TOKEN: z
-    .string({
-      required_error: "ENV Token DISCORD (application dev portal) is required",
-    })
-    .nonempty({
-      message: "ENV Token DISCORD (application) is empty",
+    NODE_ENV: z.enum(['development', 'production']).default('production'),
+    PORT: z.string().default('3000'),
+    DISCORD_TOKEN: z.string({
+        required_error: "ENV Token DISCORD (application dev portal) is required",
+    }).nonempty({
+        message: "ENV Token DISCORD (application) is empty",
     }),
   DISCORD_APPLICATION_ID: z
     .string({
