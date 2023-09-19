@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
     // where the compiler will output the files after outdir name
-    "rootDir": ".",
+    // "rootDir": ".",
     // "outDir": "./dist",
-    "baseUrl": "./server",
+    // "baseUrl": "./server",
     // "paths": {
     // },
     "lib": ["ESNext"],
