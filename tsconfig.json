@@ -35,7 +35,7 @@
   // where all files ts to check are located
   "include": ["./*.ts", "./server"],
   "exclude": ["node_modules"],
-  // All to reference files from other tsconfigs 
+  // All to reference files (.d.ts) generated from other tsconfigs 
   //   "references": [
   //     { "path": "./ref_to_another_tsconfig_file" }
   // ]
