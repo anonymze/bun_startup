@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    // where the compiler will output the files after outdir name
+    // where the compiler will output the files after outdir name (base . if composite true)
     "rootDir": ".",
     "outDir": "./dist",
     "baseUrl": ".",
@@ -12,9 +12,11 @@
     "target": "esnext",
     "moduleResolution": "bundler",
     "moduleDetection": "force",
-    "allowImportingTsExtensions": true,
+    "allowImportingTsExtensions": false,
     "noEmit": true,
     "composite": true,
+    // with composite i think it's true by default
+    "declaration": true,
     "strict": true,
     "downlevelIteration": true,
     "skipLibCheck": true,
@@ -24,12 +26,16 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
-    "sourceMap": true,
+    "sourceMap": false,
     "types": [
       "bun-types" // add Bun global
     ],    
   },
   // where all files ts to check are located
   "include": ["./*.ts", "./server"],
-  "exclude": ["node_modules"]
+  "exclude": ["node_modules"],
+  // All to reference files from other tsconfigs 
+  //   "references": [
+  //     { "path": "./ref_to_another_tsconfig_file" }
+  // ]
 }

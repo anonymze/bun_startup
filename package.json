@@ -8,7 +8,8 @@
     "bun-types": "latest",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
-    "prettier": "3.0.3"
+    "prettier": "3.0.3",
+    "typescript": "^5.2.2"
   },
   "peerDependencies": {
     "typescript": "^5.0.0"
@@ -19,7 +20,6 @@
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "check-types": "tsc",
-
     "discord-start": "bun run discord-register && bun run ./server/discord/commands/interaction_commands.ts",
     "discord-register": "bun run ./server/discord/commands/register_commands.ts"
   },
