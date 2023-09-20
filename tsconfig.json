@@ -26,6 +26,7 @@
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
+    "isolatedModules": false, 
     "sourceMap": false,
     "types": [
       "bun-types" // add Bun global
