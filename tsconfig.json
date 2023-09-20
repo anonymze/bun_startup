@@ -3,9 +3,10 @@
     // where the compiler will output the files after outdir name
     "rootDir": ".",
     "outDir": "./dist",
-    // "baseUrl": "./server",
-    // "paths": {
-    // },
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./server/*"]
+    },
     "lib": ["ESNext"],
     "module": "esnext",
     "target": "esnext",
