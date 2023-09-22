@@ -6,6 +6,7 @@
     "@typescript-eslint/eslint-plugin": "^6.7.0",
     "@typescript-eslint/parser": "^6.7.0",
     "bun-types": "latest",
+    "drizzle-kit": "^0.19.13",
     "eslint": "^8.49.0",
     "eslint-config-prettier": "^9.0.0",
     "prettier": "3.0.3",
@@ -20,11 +21,17 @@
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "check-types": "tsc",
+
     "discord-start": "bun run discord-register && bun run ./server/discord/commands/interaction_commands.ts",
-    "discord-register": "bun run ./server/discord/commands/register_commands.ts"
+    "discord-register": "bun run ./server/discord/commands/register_commands.ts",
+
+    "db-migrations": "drizzle-kit generate:pg --config=./server/db/drizzle.config.ts",
+    "db-migrate": "bun run ./server/db/migrate.ts"
   },
   "dependencies": {
     "discord.js": "^14.13.0",
+    "drizzle-orm": "^0.28.6",
+    "postgres": "^3.3.5",
     "zod": "^3.22.2"
   }
 }

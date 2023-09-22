@@ -14,4 +14,4 @@ client.once(Events.ClientReady, (c) => {
 // login with the token from .env.local
 client.login(ENV.DISCORD_TOKEN);
 
-export { client as instanceClientDiscord };
+export { client as discordClientInstance };

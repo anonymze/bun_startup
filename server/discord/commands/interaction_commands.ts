@@ -1,10 +1,10 @@
 import { Events } from "discord.js";
-import { instanceClientDiscord } from "../bot";
+import { discordClientInstance } from "../bot";
 
 /** COMMANDS REGISTERED WILL BE INTERACTED HERE **/
 
 // interac with commands
-instanceClientDiscord.on(Events.InteractionCreate, async interaction => {
+discordClientInstance.on(Events.InteractionCreate, async interaction => {
     if (!interaction.isChatInputCommand()) return;
   
     if (interaction.commandName === 'ping_pong') {
@@ -17,10 +17,10 @@ instanceClientDiscord.on(Events.InteractionCreate, async interaction => {
 });
 
 // interac with actions
-instanceClientDiscord.on(Events.UserUpdate, async (oldUser, newUser) => {
+discordClientInstance.on(Events.UserUpdate, async (oldUser, newUser) => {
   if (oldUser.avatarURL === newUser.avatarURL) return;
 
-  const channel = await instanceClientDiscord.channels.fetch('channel_id');
+  const channel = await discordClientInstance.channels.fetch('channel_id');
   
   if (!channel || !channel.isTextBased()) return;
 
