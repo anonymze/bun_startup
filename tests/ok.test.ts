@@ -12,13 +12,13 @@ console.log(random2.mock.results);
 
 test("float number", () => {
   expect(0.2 + 0.1).toBeCloseTo(0.3, 5); // passes
-})
+});
 
 describe("arithmetic", () => {
   test("2 + 2", () => {
     expect(2 + 2).toBe(4);
   });
-  
+
   test("2 * 2", () => {
     expect(2 * 2).toBe(4);
   });
@@ -54,4 +54,3 @@ test("spyon", () => {
   ringo.sayHi();
   expect(spy).toHaveBeenCalledTimes(1);
 });
-

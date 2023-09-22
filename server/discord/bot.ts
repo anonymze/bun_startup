@@ -1,10 +1,10 @@
-import { ENV } from '../../env';
-import {Client, Events, GatewayIntentBits} from 'discord.js';
+import { ENV } from "../../env";
+import { Client, Events, GatewayIntentBits } from "discord.js";
 
 /** SET INSTANCE CLIENT DISCORD HERE */
 
 // create a new Client instance
-const client = new Client({intents: [GatewayIntentBits.Guilds]});
+const client = new Client({ intents: [GatewayIntentBits.Guilds] });
 
 // listen for the client to be ready
 client.once(Events.ClientReady, (c) => {

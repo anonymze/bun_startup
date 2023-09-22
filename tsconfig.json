@@ -15,27 +15,27 @@
     "allowImportingTsExtensions": false,
     "noEmit": true,
     "composite": true,
-    // with composite i think it's true by default
+    // with composite it's true by default
     "declaration": true,
     "strict": true,
     "downlevelIteration": true,
     "skipLibCheck": true,
     "jsx": "preserve",
-    // "jsx": "react",
+    // "jsx": "react-jsx",
     "allowSyntheticDefaultImports": true,
     "forceConsistentCasingInFileNames": true,
     "allowJs": true,
     "verbatimModuleSyntax": true,
-    "isolatedModules": false, 
+    "isolatedModules": false,
     "sourceMap": false,
     "types": [
       "bun-types" // add Bun global
-    ],    
+    ]
   },
   // where all files ts to check are located
-  "include": ["./*.ts", "./server"],
-  "exclude": ["node_modules"],
-  // All to reference files (.d.ts) generated from other tsconfigs 
+  "include": ["./.eslintrc.cjs", "./*.ts", "./server"],
+  "exclude": ["node_modules"]
+  // All to reference files (.d.ts) generated from other tsconfigs
   //   "references": [
   //     { "path": "./ref_to_another_tsconfig_file" }
   // ]

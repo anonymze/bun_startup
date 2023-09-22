@@ -1,0 +1,31 @@
+{
+  "version": "5",
+  "dialect": "pg",
+  "id": "7fe7079e-9ca7-47f7-93cc-97df7a0d1900",
+  "prevId": "00000000-0000-0000-0000-000000000000",
+  "tables": {
+    "blog": {
+      "name": "blog",
+      "schema": "",
+      "columns": {
+        "id": {
+          "name": "id",
+          "type": "serial",
+          "primaryKey": false,
+          "notNull": true
+        }
+      },
+      "indexes": {},
+      "foreignKeys": {},
+      "compositePrimaryKeys": {},
+      "uniqueConstraints": {}
+    }
+  },
+  "enums": {},
+  "schemas": {},
+  "_meta": {
+    "schemas": {},
+    "tables": {},
+    "columns": {}
+  }
+}
