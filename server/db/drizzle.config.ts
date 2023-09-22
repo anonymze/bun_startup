@@ -4,7 +4,7 @@ import { drizzle } from "drizzle-orm/postgres-js";
 import postgres from "postgres";
 
  export default {
-  // cant make relative paths because the script start froml package.json i guess...
+  // cant make relative paths because the script start from package.json i guess...
   schema: "server/db/schema/**/schema.ts",
   out: "server/db/migrations",
   driver: 'pg',

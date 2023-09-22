@@ -25,7 +25,7 @@
     "discord-start": "bun run discord-register && bun run ./server/discord/commands/interaction_commands.ts",
     "discord-register": "bun run ./server/discord/commands/register_commands.ts",
 
-    "db-migrations": "drizzle-kit generate:pg --config=./server/db/drizzle.config.ts",
+    "db-migrations": "drizzle-kit generate:pg --config=./server/db/drizzle.config.ts --custom",
     "db-migrate": "bun run ./server/db/migrate.ts"
   },
   "dependencies": {
