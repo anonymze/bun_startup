@@ -16,20 +16,21 @@
     "typescript": "^5.0.0"
   },
   "scripts": {
-    "start": "bun run ./server/index.ts",
+    "start": "bun run ./server/src/index.ts",
     "build": "tsc && bun build",
     "format": "prettier --write .",
     "lint": "eslint --ext .js,.jsx,.ts,.tsx .",
     "check-types": "tsc",
     "discord-start": "bun run discord-register && bun run ./server/discord/commands/interaction_commands.ts",
     "discord-register": "bun run ./server/discord/commands/register_commands.ts",
-    "db-migrations": "drizzle-kit generate:pg --config=./server/db/drizzle.config.ts",
+    "db-migrations": "bun run drizzle-kit generate:pg --config=./server/db/drizzle.config.ts",
     "db-migrate": "bun run ./server/db/drizzle.migrate.ts",
-    "db-studio": "drizzle-kit studio --config=./server/db/drizzle.config.ts  --host=127.0.0.1  --verbose"
+    "db-studio": "bun run drizzle-kit studio --config=./server/db/drizzle.config.ts  --host=127.0.0.1  --verbose"
   },
   "dependencies": {
     "discord.js": "^14.13.0",
     "drizzle-orm": "^0.28.6",
+    "drizzle-zod": "^0.5.1",
     "pg": "^8.11.3",
     "postgres": "^3.3.5",
     "zod": "^3.22.2"
