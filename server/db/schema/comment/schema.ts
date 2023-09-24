@@ -3,7 +3,7 @@ import { blogSchema as blog } from "../blog/schema";
 
 export const commentSchema = pgTable("comment", {
   id: serial("id").primaryKey(),
-  userId: uuid("user_id"),
+  userId: uuid("user_id").defaultRandom(),
   blogId: integer("blog_id").references(() => blog.id),
   title: varchar("title", { length: 256  }).notNull(),
   content: text("content").notNull(),

@@ -4,7 +4,7 @@ import { z } from "zod";
 
 export const blogSchema = pgTable("blog", {
   id: serial("id").primaryKey(),
-  user_id: uuid("user_id"),
+  user_id: uuid("user_id").defaultRandom(),
   title: varchar("title", { length: 256  }).notNull(),
   description: text("description"),
   visible: boolean("visible").default(true),

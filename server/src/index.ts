@@ -1,7 +1,8 @@
 import { dbInstance } from "../db/drizzle.config";
 import { blogSchema } from "../db/schema/blog/schema";
 
-const blogs = await dbInstance.select().from(blogSchema).execute();
+const blogs = await dbInstance.select().from(blogSchema);
+console.log(dbInstance);
 console.log(blogs);
 
 const app = Bun.serve({
