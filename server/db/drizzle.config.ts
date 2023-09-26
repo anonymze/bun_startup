@@ -7,9 +7,9 @@ export default  {
   schema: "server/db/schema/**/schema.ts",
   out: "server/db/migrations",
   driver: "pg",
-  dbCredentials: {
-    connectionString: ENV.DATABASE_STRING,
-  },
+  // dbCredentials: {
+  //   connectionString: ENV.DATABASE_STRING,
+  // },
 } satisfies Config;
 
 export const dbInstance = drizzle(postgres(ENV.DATABASE_STRING, { max: 1 }));
