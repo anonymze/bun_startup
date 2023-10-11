@@ -1,42 +1,75 @@
 {
   "compilerOptions": {
-    // where the compiler will output the files after outdir name (base . if composite true)
-    "rootDir": ".",
-    "outDir": "./dist",
-    "baseUrl": ".",
-    "paths": {
-      "@/*": ["./server/*"]
-    },
-    "lib": ["ESNext"],
-    "module": "esnext",
-    "target": "esnext",
-    "moduleResolution": "bundler",
-    "moduleDetection": "force",
-    "allowImportingTsExtensions": false,
-    "noEmit": true,
-    "composite": true,
-    // with composite i think it's true by default
-    "declaration": true,
-    "strict": true,
-    "downlevelIteration": true,
-    "skipLibCheck": true,
-    "jsx": "preserve",
-    // "jsx": "react",
-    "allowSyntheticDefaultImports": true,
-    "forceConsistentCasingInFileNames": true,
-    "allowJs": true,
-    "verbatimModuleSyntax": true,
-    "isolatedModules": false, 
-    "sourceMap": false,
-    "types": [
-      "bun-types" // add Bun global
-    ],    
-  },
-  // where all files ts to check are located
-  "include": ["./*.ts", "./server"],
-  "exclude": ["node_modules"],
-  // All to reference files (.d.ts) generated from other tsconfigs 
-  //   "references": [
-  //     { "path": "./ref_to_another_tsconfig_file" }
-  // ]
+      /* Base Options: */
+      "esModuleInterop": true,
+      "skipLibCheck": true,
+      "target": "es2022",
+      "verbatimModuleSyntax": true,
+      "allowJs": true,
+      "resolveJsonModule": true,
+      "moduleDetection": "force",
+      // where it will start to search files in your code (if "./" it is where tsconfig.json is)
+      // "baseUrl": "./",
+      // alias for paths in your code
+      "paths": {
+       "@/*": ["./server/*"]
+      },
+      // if true your code will not be transpiled to older js runtime
+      // "downlevelIteration": true,
+      "allowImportingTsExtensions": false,
+
+      /* Strictness */
+      "strict": true,
+      // prevents you from accessing an array or object without first checking if it's defined
+      "noUncheckedIndexedAccess": true,
+      /* if true you can import default from a module that doesn't have a default export */
+      // "allowSyntheticDefaultImports": true,
+      /* check a return is for sure returned */
+      "noImplicitReturns": true,
+      // prevent using wrong casing naming files for system with case sensitive (linux)
+      "forceConsistentCasingInFileNames": true,
+      "noImplicitAny": true,
+      /* ensures that a case have a return / throw / break */
+      "noFallthroughCasesInSwitch": true,
+      "noUnusedParameters": true,
+      "noUnusedLocals": true,
+
+      /* if transpiling with TypeScript: */
+      // "moduleResolution": "NodeNext",
+      // "module": "NodeNext",
+      // "outDir": "dist",
+      // "sourceMap": true,
+      /* preserve: will keep jsx part to be consummed later (product .jsx files) / react: will emit a .js file who does not need a futur transformation */
+      /* react-native: same as preserve but files will have .js extension */
+      /* react-jsx: (relevant for React 17) avoid the necessity of importing React in every file where jsx is used (only for emit not checking) */
+      // "jsx": "react",
+      /* where the compiler will output the files after outdir name (base . if composite true) */
+      // "rootDir": ".",
+
+      /* if NOT transpiling with TypeScript: */      
+      "moduleResolution": "Bundler",
+      "module": "ESNext",
+      "noEmit": true,
+
+      /* if your code runs in the DOM: */
+      // "lib": ["es2022", "dom", "dom.iterable"],
+
+      /* if your code doesn't run in the DOM: */
+      "lib": ["es2022"],
+
+      /* if you're building for a library emit all declalarion .ts files associated to the js file (is true if composite is true) */
+      "declaration": true,
+
+      /* if you're building for a library in a monorepo (large repo) */
+      "composite": true,
+      // will redirect you to the source file instead of the reference file when searching the source
+      "declarationMap": true,
+
+      "types": [
+        "bun-types" // add Bun types global
+      ],    
+
+      /* where all files ts to CHECK are located */
+      "include": ["./*.ts", "./server"],
+      "exclude": ["node_modules"]      
 }

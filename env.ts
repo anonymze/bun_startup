@@ -31,4 +31,8 @@ const envSvhema = z.object({
     }),
 });
 
-export const ENV = envSvhema.parse(process.env);
+
+export namespace ENVOU {
+  export const ENV = envSvhema.parse(process.env);
+}
+

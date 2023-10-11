@@ -1,4 +1,4 @@
-import { ENV } from '../../env';
+import { ENVOU } from '../../env';
 import {Client, Events, GatewayIntentBits} from 'discord.js';
 
 /** SET INSTANCE CLIENT DISCORD HERE */
