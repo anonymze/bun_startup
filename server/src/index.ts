@@ -1,3 +1,9 @@
+import { dbInstance } from "../db/drizzle.config";
+import { blogSchema } from "../db/schema/blog/schema";
+
+const blogs = await dbInstance.select().from(blogSchema);
+console.log(blogs);
+
 const app = Bun.serve({
   port: process.env.PORT,
   fetch(req) {
@@ -12,3 +18,5 @@ const app = Bun.serve({
     });
   },
 });
+
+process.exit(0);
