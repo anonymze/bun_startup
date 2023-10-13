@@ -67,9 +67,9 @@
 
       "types": [
         "bun-types" // add Bun types global
-      ],    
-
+      ] 
+    },
       /* where all files ts to CHECK are located */
       "include": ["./*.ts", "./server"],
-      "exclude": ["node_modules"]      
+      "exclude": ["node_modules"]        
 }
